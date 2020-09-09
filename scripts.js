@@ -43,6 +43,24 @@ async function renderEvents() {
     html = ''
     cont = 0
     htmlSegment = ''
+    let arreglo = []
+    for (let i=0; i<eventos.length; i++) {
+        for (let j=0; j<eventos[i]["events"].length; j++) {
+            if(arreglo.length==0) {
+                arreglo.push(eventos[i]["events"][j])
+            }else {
+                if(arreglo.includes(eventos[i]["events"][j])){
+
+                }else {
+                    arreglo.push(eventos[i]["events"][j])
+                }
+            }
+        }
+    }
+    console.log(arreglo.length)
+    for (let i=0;i<arreglo.length;i++){
+        console.log(arreglo[i])
+    }
 
 }
 
